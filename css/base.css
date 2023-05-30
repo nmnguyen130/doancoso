@@ -1,0 +1,100 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    --primary-color: #007bff;
+    --lighter-primary-color: #66a7ff;
+    --darker-blue-color: #0052aa;
+    --red-color: #ff0000;
+    --white-color: #fff;
+    --dark-color: #333;
+    --border-color: #ced4da;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* font-size: 62.5%; */
+    /* line-height: 16px; */
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+header {
+    background-color: #fff;
+    height: 60px;
+    transition: all 0.3s ease;
+}
+
+main {
+    background-color: #f5f6f8;
+}
+
+footer {
+    border-top: 2px solid var(--white-color);
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+.highlight {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* ANIMATION */
+@keyframes submenuGrowth {
+    from {
+      opacity: 0;
+      transform: scale(0);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes growth {
+    from {
+        transform: scale(var(--growth-from));
+    }
+    to {
+        transform: scale(var(--growth-to));
+    }
+}
+
+@keyframes dropdownClose {
+    0% {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(-50%) translateY(36px);
+    }
+    100% {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateX(-50%) translateY(46px);
+    }
+}

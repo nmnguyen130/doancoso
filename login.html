@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tài khoản</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header__page">
+        <a href="index.html" class="btn-return">Trở về</a>
+        <a href="index.html" class="header__brand">LaptopNH</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="form-wrapper">
+        <div class="form-container">
+          <!-- Header Container -->
+          <div class="header-content">
+            <ul class="header-tabs">
+              <li class="header-item">
+                <a href="#" class="header-item__link" id="signupLink"
+                  >Đăng ký</a
+                >
+              </li>
+              <li class="header-item">
+                <a href="#" class="header-item__link active" id="loginLink"
+                  >Đăng nhập</a
+                >
+              </li>
+              <li class="header-item hidden">
+                <a href="#" class="header-item__link active" id="forgotLink"
+                  >Quên mật khẩu</a
+                >
+              </li>
+              <li class="header-item hidden">
+                <a href="#" class="header-item__link active" id="resetpassLink"
+                  >Đặt mật khẩu mới</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Form Infor -->
+          <div class="form-infor">
+            <!-- Login Form -->
+            <div class="form login" id="loginForm">
+              <div class="form-content">
+                <form action="#">
+                  <div class="field input-field">
+                    <input
+                      type="email"
+                      placeholder="Email/Số điện thoại"
+                      class="input"
+                    />
+                  </div>
+                  <div class="field input-field">
+                    <input
+                      type="password"
+                      placeholder="Nhập mật khẩu"
+                      class="password"
+                    />
+                    <i class="bx bx-hide eye-icon"></i>
+                  </div>
+                  <div class="form-link">
+                    <a href="#" class="forgot-pass" id="forgotLink"
+                      >Quên mật khẩu?</a
+                    >
+                  </div>
+                  <div class="field button-field">
+                    <button>Đăng nhập</button>
+                  </div>
+                </form>
+              </div>
+
+              <div class="line"></div>
+
+              <div class="media-options">
+                <a href="#" class="field facebook">
+                  <i class="bx bxl-facebook facebook-icon"></i>
+                  <span>Đăng nhập bằng Facebook</span>
+                </a>
+              </div>
+              <div class="media-options">
+                <a href="#" class="field google">
+                  <img
+                    src="./img/socials/icon-gg.png"
+                    alt=""
+                    class="google-img"
+                  />
+                  <span>Đăng nhập bằng Google</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Signup Form -->
+            <div class="form signup" id="signupForm">
+              <div class="form-content">
+                <form action="#">
+                  <div class="field input-field">
+                    <input
+                      type="email"
+                      placeholder="Email/Số điện thoại"
+                      class="input"
+                    />
+                  </div>
+                  <div class="field input-field">
+                    <input
+                      type="password"
+                      placeholder="Nhập mật khẩu"
+                      class="password"
+                    />
+                    <i class="bx bx-hide eye-icon"></i>
+                  </div>
+                  <div class="field input-field">
+                    <input
+                      type="password"
+                      placeholder="Nhập lại mật khẩu"
+                      class="password"
+                    />
+                    <i class="bx bx-hide eye-icon"></i>
+                  </div>
+                  <div class="field button-field">
+                    <button>Đăng ký</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <!-- Forgot Form -->
+            <div class="form forgot" id="forgotForm">
+              <div class="form-content">
+                <form action="#">
+                  <div class="field input-field">
+                    <input type="email" placeholder="Email" class="input" />
+                  </div>
+                  <div class="form-link">
+                    <a href="#" class="login-return" id="loginLink"
+                      >Trở lại đăng nhập</a
+                    >
+                  </div>
+                  <div class="field button-field">
+                    <button id="resetpassLink">Gửi</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <!-- ResetPass Form -->
+            <div class="form resetpass" id="resetpassForm">
+              <div class="form-content">
+                <form action="#">
+                  <div class="field input-field">
+                    <input
+                      type="password"
+                      placeholder="Nhập mật khẩu mới"
+                      class="password"
+                    />
+                    <i class="bx bx-hide eye-icon"></i>
+                  </div>
+                  <div class="field input-field">
+                    <input
+                      type="password"
+                      placeholder="Nhập lại mật khẩu mới"
+                      class="password"
+                    />
+                    <i class="bx bx-hide eye-icon"></i>
+                  </div>
+                  <div class="form-link">
+                    <a href="#" class="login-return" id="loginLink"
+                      >Trở lại đăng nhập</a
+                    >
+                  </div>
+                  <div class="field button-field">
+                    <button>Hoàn thành</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./js/login.js"></script>
+  </body>
+</html>
