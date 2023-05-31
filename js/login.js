@@ -1,19 +1,29 @@
-const btnShowHide = document.querySelectorAll(".eye-icon");
+document.addEventListener("DOMContentLoaded", () => {
+  const btnShowHide = document.querySelectorAll(".eye-icon");
 
-btnShowHide.forEach((eyeIcon) => {
-  eyeIcon.addEventListener("click", () => {
-    let passField =
-      eyeIcon.parentElement.parentElement.querySelectorAll(".password");
+  btnShowHide.forEach((eyeIcon) => {
+    const passwordField = eyeIcon.parentElement.querySelector(".password");
 
-    passField.forEach((password) => {
-      if (password.type === "password") {
-        password.type = "text";
-        eyeIcon.classList.replace("bx-hide", "bx-show");
-        return;
+    function checkInputValue() {
+      if (passwordField.value.trim() === "") {
+        eyeIcon.classList.add("hidden");
+      } else {
+        eyeIcon.classList.remove("hidden");
       }
-      password.type = "password";
-      eyeIcon.classList.replace("bx-show", "bx-hide");
+    }
+
+    eyeIcon.addEventListener("click", () => {
+      if (passwordField.type === "password") {
+        passwordField.type = "text";
+        eyeIcon.classList.replace("bx-hide", "bx-show");
+      } else {
+        passwordField.type = "password";
+        eyeIcon.classList.replace("bx-show", "bx-hide");
+      }
     });
+
+    passwordField.addEventListener("input", checkInputValue);
+    checkInputValue();
   });
 });
 

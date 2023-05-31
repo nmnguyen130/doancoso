@@ -112,18 +112,23 @@ function toggleDropdown() {
 
 // Pagination
 var currentPage = 1;
-var totalPages = 5;
+var totalPages = 3;
 
 var previousBtn = document.querySelector(".previous");
 var nextBtn = document.querySelector(".next");
 var pageLinks = document.querySelectorAll(".page");
 
+var productContainer = document.querySelector(".product__container");
+var productPage = document.querySelectorAll(".product__list");
+
 function updatePagination() {
   for (var i = 0; i < pageLinks.length; i++) {
     if (i + 1 === currentPage) {
       pageLinks[i].classList.add("active");
+      productPage[i].classList.add("show");
     } else {
       pageLinks[i].classList.remove("active");
+      productPage[i].classList.remove("show");
     }
   }
 
