@@ -149,6 +149,7 @@ header {
     display: flex;
     gap: 8px;
     margin-bottom: 10px;
+    transition: .4s ease;
 }
 
 /* Product Container */
