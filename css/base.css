@@ -180,7 +180,8 @@ li {
     margin-left: 30px;
 }
 
-.nav__menu-item a {
+.nav__menu-item a:first-child,
+.nav__menu-item .cart-info-box {
     display: flex;
     min-width: 25%;
     align-items: center;
@@ -189,7 +190,8 @@ li {
     transition: color 0.3s ease-in-out;
 }
 
-.nav__menu-item a:hover {
+.nav__menu-item a:first-child:hover,
+.nav__menu-item .cart-info-box:hover {
     color: var(--red-color);
 }
 
@@ -285,6 +287,18 @@ li {
 .total-price span {
     font-size: 20px;
     color: var(--red-color);
+}
+
+.buy-button {
+    background-color: var(--primary-color);
+    color: #fff;
+    width: 50%;
+    text-align: center;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-top: 10px;
+    cursor: pointer;
 }
 
 /* Tooltip */
