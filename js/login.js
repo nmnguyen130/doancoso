@@ -90,3 +90,82 @@ function showForm(formType) {
     resetpassLinks[0].parentElement.classList.add("hidden");
   }
 }
+
+// Xử lý phần signup và submit thông tin đăng kí tài khoản mới
+function signup(event) {
+  event.preventDefault();
+  var firstnameInput = document.getElementById("firstname");
+  var lastnameInput = document.getElementById("lastname");
+  var emailInput = document.getElementById("signup-email");
+  var passwordInput = document.getElementById("signup-password");
+  var confirmPasswordInput = document.getElementById("confirm-password");
+
+  var firstname = firstnameInput.value.trim();
+  var lastname = lastnameInput.value.trim();
+  var email = emailInput.value.trim();
+  var password = passwordInput.value;
+  var confirmPassword = confirmPasswordInput.value;
+
+  if (!firstname || !lastname || !email || !password || !confirmPassword) {
+    alert("Vui lòng điền đầy đủ thông tin!");
+    return;
+  }
+
+  if (password !== confirmPassword) {
+    alert("Mật khẩu và xác nhận mật khẩu không khớp!");
+    return;
+  }
+
+  var user = {
+    firstName: firstname,
+    lastName: lastname,
+    email: email,
+    password: password,
+  };
+
+  var json = JSON.stringify(user);
+  localStorage.setItem(email, json);
+
+  // Clear input values
+  firstnameInput.value = "";
+  lastnameInput.value = "";
+  emailInput.value = "";
+  passwordInput.value = "";
+  confirmPasswordInput.value = "";
+
+  alert("Đăng ký thành công!");
+}
+
+document.getElementById("signup-button").addEventListener("click", signup);
+
+// Xử lý phần Login và kiểm tra người dùng có được chấp thuận truy cập hay không?
+function login(event) {
+  event.preventDefault();
+  var email = document.getElementById("login-email").value.trim();
+  var password = document.getElementById("login-password").value;
+
+  if (!email || !password) {
+    alert("Vui lòng điền đầy đủ thông tin!");
+    return;
+  }
+
+  var storedUser = localStorage.getItem(email);
+
+  if (storedUser) {
+    var user = JSON.parse(storedUser);
+    if (password === user.password) {
+      alert("Đăng nhập thành công!");
+      localStorage.setItem("hasLogin", "Login");
+
+      window.location.href = "index.html";
+    } else {
+      alert("Thông tin đăng nhập không chính xác. Vui lòng kiểm tra lại!");
+      // Tiến hành xử lý khi đăng nhập thất bại, ví dụ như hiển thị thông báo lỗi hoặc xóa các trường đăng nhập
+    }
+  } else {
+    alert("Người dùng không tồn tại. Vui lòng đăng ký trước!");
+    // Tiến hành xử lý khi người dùng không tồn tại, ví dụ như hiển thị thông báo lỗi hoặc xóa các trường đăng nhập
+  }
+}
+
+document.getElementById("login-button").addEventListener("click", login);
