@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thanh toán thành công</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/success.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header__container">
+        <div class="header__brand">
+          <a href="index.html">
+            <span>LaptopNH</span>
+          </a>
+        </div>
+        <nav class="navbar">
+          <form class="nav__search" action="/search" method="GET">
+            <input
+              type="text"
+              name="query"
+              placeholder="Tìm kiếm sản phẩm..."
+            />
+            <button class="btn-search" type="submit">
+              <i class="bx bx-search"></i>
+            </button>
+          </form>
+          <ul class="nav__menu">
+            <li class="nav__menu-item">
+              <div class="cart-info-box">
+                <i class="bx bx-cart-add"></i>
+                <span>Giỏ hàng</span>
+                <div class="cart-items-content">
+                  <ul class="cart-items-list"></ul>
+                  <div class="cart-actions">
+                    <div class="total-price">Tổng tiền: <span>0đ</span></div>
+                    <a href="thanhtoan.html" class="buy-button">Mua</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav__menu-item">
+              <a href="#" class="search-order">
+                <i class="bx bx-time-five"></i>
+                <span>Tra cứu đơn hàng</span>
+              </a>
+            </li>
+            <li class="nav__menu-item">
+              <a href="login.html" class="login-form">
+                <i class="bx bx-user-circle"></i>
+                <span>Tài khoản</span>
+              </a>
+            </li>
+            <li class="nav__menu-item">
+              <a href="#" class="tooltip">
+                <i class="bx bx-help-circle"></i>
+                <span>Trợ giúp</span>
+                <div class="tooltip-content">
+                  <p>Hotline: 1xxx xxxx</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="second-menu">
+      <div class="second-menu__category has-submenu">
+        <a href="#">
+          <i class="bx bx-file"></i>
+          Danh mục sản phẩm
+        </a>
+        <ul class="submenu">
+          <li class="has-submenu">
+            <a href="#"
+              ><i class="bx bx-laptop"></i> Laptop mới
+              <i class="bx bx-chevron-right"></i
+            ></a>
+            <ul class="sub-submenu">
+              <li><a href="#">Laptop Gaming</a></li>
+              <li><a href="#">Laptop Văn phòng</a></li>
+              <li><a href="#">Laptop Đồ họa</a></li>
+            </ul>
+          </li>
+          <li class="has-submenu">
+            <a href="#"
+              ><i class="bx bx-headphone"></i> Phụ kiện laptop
+              <i class="bx bx-chevron-right"></i
+            ></a>
+            <ul class="sub-submenu">
+              <li><a href="#">Chuột</a></li>
+              <li><a href="#">Bàn phím</a></li>
+              <li><a href="#">Tai nghe</a></li>
+            </ul>
+          </li>
+          <li style="margin-right: 50px">
+            <a href="#"><i class="bx bx-wrench"></i> Sửa chữa Laptop </a>
+          </li>
+        </ul>
+      </div>
+      <ul class="second-menu__list">
+        <li class="second-menu__item">
+          <a href="#"><i class="bx bxs-truck"></i>Giao lắp chuyên nghiệp</a>
+        </li>
+        <div class="col-vertical">|</div>
+        <li class="second-menu__item">
+          <a href="#"><i class="bx bx-wrench"></i>Bảo hành nhanh gọn</a>
+        </li>
+        <div class="col-vertical">|</div>
+        <li class="second-menu__item">
+          <a href="#"><i class="bx bx-gift"></i>Tổng hợp khuyến mãi</a>
+        </li>
+        <div class="col-vertical">|</div>
+        <li class="second-menu__item">
+          <a href="#"><i class="bx bx-diamond"></i>LaptopNH</a>
+        </li>
+      </ul>
+    </section>
+
+    <main>
+      <div class="success__form">
+        <div class="success__content">
+          <span>Thanh toán thành công</span>
+          <i class="bx bx-check-circle"></i>
+          <p>
+            Thanh toán đã thực hiện thành công.<br />
+            Cảm ơn quý khách đã tin tưởng và mua hàng tại LaptopNH.
+          </p>
+        </div>
+        <div class="success__info">
+          <table class="success__table">
+            <tbody>
+              <tr>
+                <td class="title">Hình thức thanh toán:</td>
+                <td class="value">Chuyển khoản NH ACB</td>
+              </tr>
+              <tr>
+                <td class="title">Địa chỉ nhận hàng:</td>
+                <td class="value">Cửa hàng LaptopNH</td>
+              </tr>
+              <tr>
+                <td class="title">Số điện thoại:</td>
+                <td class="value">0348525652</td>
+              </tr>
+              <tr class="price-info">
+                <td class="title">Số tiền:</td>
+                <td class="value">0đ</td>
+              </tr>
+              <tr>
+                <td class="title">Mã giao dịch:</td>
+                <td class="value">0123456789ABCD</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="success__btn">
+          <a href="index.html" class="continue-buy-btn">Tiếp tục mua sắm</a>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>Mọi thắc mắc xin vui lòng liên hệ: <span>1xxx.xxxx</span></p>
+    </footer>
+
+    <script src="./js/cart.js"></script>
+    <script src="./js/success.js"></script>
+  </body>
+</html>

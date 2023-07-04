@@ -1,0 +1,110 @@
+header {
+    background-color: var(--primary-color);
+    height: 88px;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+}
+
+/* MAIN */
+.success__form {
+    background-color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin: 15px 10px 0 40px;
+    border-radius: 10px;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.success__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.success__content span {
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--dark-color);
+}
+
+.success__content i {
+    font-size: 64px;
+    color: #71be34;;
+}
+
+.success__content p {
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Success Info */
+.success__table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: center;
+}
+
+.success__table tbody tr td.title {
+    width: 50%;
+    color: #333;
+    font-size: 15px;
+    line-height: 18px;
+    padding-top: 14px;
+}
+
+.success__table tbody tr td.value {
+    width: 50%;
+    color: #3f3f3f;
+    font-size: 15px;
+    line-height: 18px;
+    padding-top: 14px;
+}
+
+.success__table tbody tr.price-info td.title,
+.success__table tbody tr.price-info td.value {
+    color: var(--dark-color);
+    font-weight: 700;
+}
+
+/* Success Btn */
+.success__btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 100px;
+    margin-top: 20px;
+}
+
+.continue-buy-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.continue-buy-btn:hover {
+    opacity: 0.7;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 10px;
+    text-align: center;
+}
+
+footer p span {
+    font-weight: 500;
+}

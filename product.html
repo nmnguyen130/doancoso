@@ -34,28 +34,15 @@
           <ul class="nav__menu">
             <li class="nav__menu-item">
               <div class="cart-info-box">
+                <div class="cart-hasitem show">
+                  <span class="number-item">0</span>
+                </div>
                 <i class="bx bx-cart-add"></i>
                 <span>Giỏ hàng</span>
                 <div class="cart-items-content">
-                  <ul class="cart-items-list">
-                    <li class="cart-item">
-                      <img
-                        src="./img/products/laptop_hp_14-CF2033WM.jpg"
-                        alt=""
-                      />
-                      <span class="item-name">Laptop HP 14-CF2033WM</span>
-                      <span class="item-price">8.000.000đ</span>
-                    </li>
-                    <li class="cart-item">
-                      <img src="./img/products/Chuot-kd-HP-X4000.jpg" alt="" />
-                      <span class="item-name">Chuột không dây HP X4000</span>
-                      <span class="item-price">389.000đ</span>
-                    </li>
-                  </ul>
+                  <ul class="cart-items-list"></ul>
                   <div class="cart-actions">
-                    <div class="total-price">
-                      Tổng tiền: <span>8.389.000đ</span>
-                    </div>
+                    <div class="total-price">Tổng tiền: <span>0đ</span></div>
                     <a href="thanhtoan.html" class="buy-button">Mua</a>
                   </div>
                 </div>
@@ -146,7 +133,7 @@
           <div class="left-column">
             <div class="product-gallery">
               <ul class="product-bigImage">
-                <li class="product-img active">
+                <li class="product-img cart-img active">
                   <img src="./img/products/vivobook-15x-oled-0.jpg" alt="" />
                 </li>
                 <li class="product-img">
@@ -493,5 +480,6 @@
     </footer>
 
     <script src="./js/product.js"></script>
+    <script src="./js/cart.js"></script>
   </body>
 </html>
